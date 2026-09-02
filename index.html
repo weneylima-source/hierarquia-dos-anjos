@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hierarquia dos Anjos</title>
+<meta name="description" content="Infográfico interativo dos nove coros angélicos segundo o cânon bíblico e a tradição apócrifa, com vista explodida por clique e fichas de cada anjo.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="page">
+
+<div class="starfield" id="starfield" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M16 3 L18 12 L27 14 L18 16 L16 25 L14 16 L5 14 L14 12 Z"/></svg>
+      <span class="brand-text">Hierarquia dos Anjos</span>
+    </div>
+    <div class="legend-strip">
+      <span class="legend-chip"><i class="canon"></i>Cânon bíblico</span>
+      <span class="legend-chip"><i class="apoc"></i>Tradição apócrifa</span>
+      <span class="legend-chip"><i class="fall"></i>Lúcifer &amp; a Queda</span>
+    </div>
+  </div>
+  <nav class="ordernav" id="ordernav" aria-label="Menu das ordens angélicas">
+    <div class="order-items" id="orderItems"></div>
+    <span class="nav-sep" aria-hidden="true"></span>
+    <button class="explode-all ui" id="explodeAll" type="button" aria-pressed="false">⊕ Explodir tudo</button>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema claro/escuro">
+      <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      <span id="themeLabel">Modo noturno</span>
+    </button>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <img class="rose" src="img/hero.webp" alt="Mandala com os nove coros angélicos reunidos ao redor do trono" width="800" height="770">
+    <p class="eyebrow">Funções · nomes · leituras</p>
+    <h1>Hierarquia dos Anjos</h1>
+    <p class="sub">Segundo o cânon bíblico e a tradição apócrifa</p>
+    <p class="lede">Nove coros dispostos em torno do trono, cada um com sua função, seus nomes e as passagens que os sustentam — com a posição de Lúcifer antes da queda assinalada onde a tradição a situa.</p>
+    <p class="hint ui">Toque no <b>medalhão central</b> de cada coro para revelar as leituras em vista explodida · toque no <b>nome de um anjo</b> para abrir sua ficha.</p>
+  </section>
+
+  <section class="choirs" id="choirs" aria-label="Os nove coros angélicos"></section>
+
+  <section class="lucifer" id="lucifer">
+    <div class="lucifer-top">
+      <div class="lucifer-content">
+        <p class="kicker ui">Nota especial</p>
+        <div class="lucifer-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v6M12 2l-3 3M12 2l3 3M12 8 3 21h18L12 8Z"/></svg>
+          <h2>A posição de Lúcifer antes da queda</h2>
+        </div>
+        <p class="body">A tradição identifica <em>Lúcifer</em> ("portador da luz", do latim) como o mais alto entre os anjos antes de sua rebelião. Alguns o situam entre os <em>Serafins</em> (Isaías 14:12-15, a "estrela da manhã"); outros, entre os <em>Querubins</em> (Ezequiel 28:12-17, o "querubim ungido que cobre"). Após a queda, Lúcifer torna-se Satanás — o adversário — e sua posição hierárquica permanece vazia: um lembrete de que a rebeldia não destrói a ordem divina, apenas exclui dela o rebelde.</p>
+      </div>
+      <div class="lucifer-figure">
+        <img src="img/lucifer.webp" alt="Lúcifer, o portador da luz, retratado antes da queda" width="700" height="700" loading="lazy">
+      </div>
+    </div>
+    <div class="lucifer-refs">
+      <div class="reading"><span class="cite">Isaías 14:12</span><span class="quote">"Como caíste do céu, ó estrela da manhã, filho da alva!"</span></div>
+      <div class="reading"><span class="cite">Ezequiel 28:12-17</span><span class="quote">"Tu eras o querubim ungido que cobre... até que se achou iniquidade em ti."</span></div>
+      <div class="reading"><span class="cite">Apocalipse 12:7-9</span><span class="quote">"Miguel e os seus anjos pelejaram contra o dragão... e não prevaleceram, nem mais se achou lugar para eles no céu."</span></div>
+      <div class="reading"><span class="cite">Lucas 10:18</span><span class="quote">"Eu vi Satanás cair do céu como um relâmpago."</span></div>
+      <div class="reading"><span class="cite">2 Enoque 29:4</span><span class="quote">"Um dos arcanjos... e sua ordem em nada se tornou."</span></div>
+    </div>
+  </section>
+
+  <section class="notes" id="notes">
+    <div class="section-head"><h2>Notas e esclarecimentos</h2><span class="line"></span></div>
+    <div class="notes-grid">
+      <div class="note-card"><b>Origem do esquema</b>A hierarquia em nove coros é atribuída a Pseudo-Dionísio, o Areopagita (séc. VI), em <i>De Coelesti Hierarchia</i>, sistematizando elementos já presentes na Escritura.</div>
+      <div class="note-card"><b>Os sete arcanjos</b>A lista enóquica (1 Enoque 20) nomeia sete: Uriel, Rafael, Raguel, Miguel, Saraqael, Gabriel e Remiel. O número de arcanjos citados varia entre quatro e sete conforme a fonte.</div>
+      <div class="note-card"><b>Uso litúrgico</b>Na tradição católica, apenas Miguel, Gabriel e Rafael são celebrados oficialmente; Uriel é venerado em algumas igrejas ortodoxas orientais.</div>
+      <div class="note-card"><b>Metatron e Sandalphon</b>Figuras centrais de 3 Enoque e da tradição da Merkavá, situados no coro dos Anjos/Malakhim, embora sua estatura na literatura mística seja excepcional.</div>
+      <div class="note-card"><b>Debate acadêmico</b>A posição exata de Lúcifer antes da queda é debatida entre estudiosos; nenhuma passagem bíblica o nomeia explicitamente por esse título dentro de um coro.</div>
+      <div class="note-card"><b>Livro de Tobias</b>Deuterocanônico — aceito por católicos e ortodoxos, mas não pelas tradições protestantes; é a única fonte canônica que nomeia Rafael.</div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="sources">
+  <div class="wrap">
+    <div class="src-grid">
+      <div class="src-col">
+        <h4>Fontes bíblicas</h4>
+        <p>Isaías, Ezequiel, Daniel, Gênesis, Êxodo, Salmos, Mateus, Lucas, Hebreus, Colossenses, Efésios, Judas, Apocalipse, Tobias (deuterocanônico).</p>
+      </div>
+      <div class="src-col">
+        <h4>Fontes apócrifas</h4>
+        <p>1 Enoque (etiópico), 2 Enoque (eslavo), 3 Enoque (hebraico), Apocalipse de Moisés, Sefer Raziel HaMalakh, Zohar.</p>
+      </div>
+      <div class="src-col">
+        <h4>Fontes teológicas</h4>
+        <p>Pseudo-Dionísio, <i>De Coelesti Hierarchia</i> (séc. VI); Tomás de Aquino, <i>Summa Theologica</i>; Gregório Magno, <i>Homilias sobre os Evangelhos</i> 34.</p>
+      </div>
+    </div>
+    <div class="legend-strip footer-legend">
+      <span class="legend-chip"><i class="canon"></i>Cânon bíblico</span>
+      <span class="legend-chip"><i class="apoc"></i>Tradição apócrifa</span>
+      <span class="legend-chip"><i class="fall"></i>Lúcifer &amp; a Queda</span>
+      <span class="legend-chip">Ordem hierárquica 1 → 9, do trono às missões terrenas</span>
+    </div>
+    <p class="colophon">Emblemas centrais reproduzidos do infográfico original · página de referência interativa com fins de estudo comparado.</p>
+  </div>
+</footer>
+
+</div>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal-card" id="modalCard" role="dialog" aria-modal="true" aria-labelledby="modalName">
+    <svg class="arch" viewBox="0 0 60 34" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 34C2 14 16 2 30 2S58 14 58 34"/></svg>
+    <button class="modal-close" id="modalClose" type="button" aria-label="Fechar">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <p class="modal-kicker" id="modalKicker">Ficha angelical</p>
+    <h3 class="modal-name" id="modalName">—</h3>
+    <dl class="modal-fields">
+      <div class="modal-field"><dt>Origem</dt><dd id="modalOrigin"></dd></div>
+      <div class="modal-field"><dt>Função</dt><dd id="modalFunction"></dd></div>
+      <div class="modal-field"><dt>Hierarquia</dt><dd id="modalHierarchy"></dd></div>
+      <div class="modal-field"><dt>Referência</dt><dd id="modalRefs" class="refs"></dd></div>
+    </dl>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
