@@ -40,6 +40,8 @@
   --wine:#8a3348;
   --wine-bright:#c4536b;
   --wine-ink:#fbe9ed;
+  --slate:#5b6591;
+  --slate-bright:#a7b0dd;
   --shadow: 0 30px 60px -25px rgba(0,0,0,.7);
   --shadow-soft: 0 14px 34px -18px rgba(0,0,0,.6);
   --glow-gold: 0 0 0 1px var(--line-strong), 0 0 28px -6px rgba(201,164,84,.55);
@@ -64,6 +66,8 @@
     --wine:#7a2338;
     --wine-bright:#5c1727;
     --wine-ink:#fdf1f2;
+    --slate:#4a5170;
+    --slate-bright:#33395c;
     --shadow: 0 30px 50px -28px rgba(60,45,10,.35);
     --shadow-soft: 0 12px 26px -16px rgba(60,45,10,.3);
     --glow-gold: 0 0 0 1px var(--line-strong), 0 0 22px -8px rgba(138,100,22,.4);
@@ -77,6 +81,7 @@
   --ink:#241c0f; --ink-dim:#4e4426; --ink-faint:#7a6d47;
   --gold:#8a6416; --gold-bright:#6b4c0e; --gold-ink:#fff9ec;
   --wine:#7a2338; --wine-bright:#5c1727; --wine-ink:#fdf1f2;
+  --slate:#4a5170; --slate-bright:#33395c;
   --shadow: 0 30px 50px -28px rgba(60,45,10,.35); --shadow-soft: 0 12px 26px -16px rgba(60,45,10,.3);
   --glow-gold: 0 0 0 1px var(--line-strong), 0 0 22px -8px rgba(138,100,22,.4);
   --glow-wine: 0 0 0 1px rgba(122,35,56,.35), 0 0 22px -8px rgba(122,35,56,.35);
@@ -88,6 +93,7 @@
   --ink:#ece5d3; --ink-dim:#9aa2c4; --ink-faint:#6b7295;
   --gold:#c9a454; --gold-bright:#e9c876; --gold-ink:#171106;
   --wine:#8a3348; --wine-bright:#c4536b; --wine-ink:#fbe9ed;
+  --slate:#5b6591; --slate-bright:#a7b0dd;
   --shadow: 0 30px 60px -25px rgba(0,0,0,.7); --shadow-soft: 0 14px 34px -18px rgba(0,0,0,.6);
   --glow-gold: 0 0 0 1px var(--line-strong), 0 0 28px -6px rgba(201,164,84,.55);
   --glow-wine: 0 0 0 1px rgba(196,83,107,.4), 0 0 28px -6px rgba(196,83,107,.45);
@@ -161,7 +167,14 @@ img{ max-width:100%; }
 .legend-chip i.canon{ background:var(--gold); }
 .legend-chip i.apoc{ background:var(--wine); }
 .legend-chip i.fall{ background:linear-gradient(135deg,var(--gold),var(--wine)); }
+.legend-chip i.islam{ background:var(--slate); }
 .legend-strip{ display:flex; gap:16px; flex-wrap:wrap; margin-left:auto; }
+a.legend-chip.islam-link{
+  color:var(--slate-bright); text-decoration:underline; text-underline-offset:3px;
+  font-weight:700; text-transform:uppercase; letter-spacing:.05em; cursor:pointer;
+  transition:opacity .2s ease;
+}
+a.legend-chip.islam-link:hover{ opacity:.75; }
 
 /* centered order menu: order names, then the explode/theme buttons at its end */
 .ordernav{
@@ -351,11 +364,36 @@ img{ max-width:100%; }
 .orders-note-refs{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
 .orders-note-refs .reading{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:12px 14px; margin:0; text-align:justify; text-justify:inter-word; }
 @media (max-width:880px){
-  .lucifer-refs, .orders-note-refs{ grid-template-columns:repeat(2,1fr); }
+  .lucifer-refs, .orders-note-refs, .azrael-refs{ grid-template-columns:repeat(2,1fr); }
 }
 @media (max-width:520px){
-  .lucifer-refs, .orders-note-refs{ grid-template-columns:1fr; }
+  .lucifer-refs, .orders-note-refs, .azrael-refs{ grid-template-columns:1fr; }
 }
+
+/* ============ AZRAEL NOTE (tradição fora do cânon e da apócrifa) ============ */
+.azrael-note{
+  margin:70px 0; border-radius:20px; padding:clamp(30px,5vw,52px);
+  background:
+    radial-gradient(ellipse 700px 300px at 20% 0%, rgba(110,120,180,.16), transparent 60%),
+    linear-gradient(180deg,var(--surface-2),var(--surface));
+  border:1px solid var(--line-strong); box-shadow:var(--shadow); position:relative; overflow:hidden;
+}
+.azrael-top{ display:flex; align-items:center; gap:clamp(20px,4vw,44px); margin-bottom:28px; flex-wrap:wrap-reverse; }
+.azrael-content{ flex:1 1 380px; min-width:280px; }
+.azrael-figure{ flex:0 0 auto; width:min(230px,44vw); margin:0 auto; }
+.azrael-figure img{
+  width:100%; height:auto; display:block;
+  filter:drop-shadow(0 18px 26px rgba(0,0,0,.55)) drop-shadow(0 0 26px rgba(167,176,221,.28));
+}
+.azrael-head{ display:flex; align-items:center; gap:12px; margin-bottom:16px; }
+.azrael-head svg{ width:30px; height:30px; color:var(--slate-bright); flex:none; }
+.azrael-note h2{ font-size:clamp(1.4rem,3.2vw,1.9rem); color:var(--slate-bright); }
+.azrael-note .kicker{ font-family:"Archivo"; font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:8px; }
+.azrael-note p.body{ font-size:1.03rem; color:var(--ink); margin:16px 0 0; text-align:justify; text-justify:inter-word; hyphens:auto; }
+.azrael-note p.body:first-of-type{ margin-top:0; }
+.azrael-note p.body em{ color:var(--slate-bright); font-style:normal; }
+.azrael-refs{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+.azrael-refs .reading{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:12px 14px; margin:0; text-align:justify; text-justify:inter-word; }
 
 /* ============ NOTES ============ */
 .notes{ margin:60px 0; }
