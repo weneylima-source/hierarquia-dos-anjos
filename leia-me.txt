@@ -1,0 +1,78 @@
+================================================================
+ HIERARQUIA DOS ANJOS — infográfico interativo
+ leia-me.txt
+================================================================
+
+SOBRE O PROJETO
+----------------------------------------------------------------
+Página web interativa que apresenta os nove coros angelicais
+(cânon bíblico e tradição apócrifa), com fichas detalhadas de
+cada anjo, notas especiais sobre os arcanjos e sobre Azrael, e
+uma página independente sobre os anjos segundo o Islamismo
+(malaika).
+
+O projeto é 100% autônomo (offline-first): todas as fontes,
+estilos e scripts estão incluídos na própria pasta — não há
+nenhuma dependência de internet ou de serviços externos para
+funcionar. Basta abrir o arquivo index.html em qualquer
+navegador.
+
+
+COMO USAR
+----------------------------------------------------------------
+1. Extraia o conteúdo do .zip mantendo a estrutura de pastas
+   intacta (não mova os arquivos individualmente).
+2. Dê duplo clique em "index.html" para abrir a página principal
+   no seu navegador.
+3. Use o botão "Modo noturno / Modo diurno" no canto superior
+   direito para alternar entre os temas claro e escuro.
+4. Clique em qualquer anjo para abrir a ficha completa (nome,
+   origem, função e referências).
+5. O link "ANJOS SEGUNDO O ISLAMISMO", no topo e no rodapé, abre
+   a página "islamismo.html" com a tradição islâmica dos anjos.
+
+
+ESTRUTURA DE ARQUIVOS
+----------------------------------------------------------------
+project/
+ |- index.html          Página principal (os nove coros)
+ |- islamismo.html       Página "Anjos segundo o Islamismo"
+ |- leia-me.txt          Este arquivo
+ |
+ |- css/
+ |   |- style.css        Estilo compartilhado por todo o site
+ |   |- islamismo.css    Estilo específico da página islâmica
+ |
+ |- js/
+ |   |- script.js        Lógica da página principal
+ |   |- islamismo.js     Lógica da página islâmica
+ |
+ |- fonts/                Fontes hospedadas localmente (.woff2)
+ |
+ |- img/                  Imagens e selos dos coros/anjos (.webp)
+
+
+REQUISITOS
+----------------------------------------------------------------
+Nenhum. Não é necessário instalar nada, rodar servidor local ou
+ter conexão com a internet — qualquer navegador moderno (Chrome,
+Firefox, Edge, Safari) é suficiente.
+
+
+PERSONALIZAÇÃO
+----------------------------------------------------------------
+- Textos e dados de cada anjo/coro: editar o array no início de
+  js/script.js (página principal) ou js/islamismo.js (página
+  islâmica).
+- Cores e tema visual: editar as variáveis no topo de
+  css/style.css (bloco ":root").
+- Imagens: substituir os arquivos correspondentes em img/,
+  mantendo o mesmo nome de arquivo.
+
+
+CRÉDITOS
+----------------------------------------------------------------
+Desenvolvedor: Weney Lima de Araújo
+E-mail: weney.lima@gmail.com
+Site oficial: https://weneylima-source.github.io/portfolio/
+================================================================
